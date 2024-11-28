@@ -182,6 +182,28 @@
         .gallery-item:hover .hover-text {
             opacity: 1;
         }
+
+        .floating-tab {
+            position: fixed;
+            bottom: 20px; 
+            left: 90%;
+            transform: translateX(-50%); 
+            z-index: 1000; 
+        }
+        
+        .floating-icon {
+            width: 150px; 
+            height: 100px; 
+            margin-right: 5px;
+            cursor: pointer; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+        }
+        
+        .floating-icon:hover {
+            transform: scale(1.1); 
+        }
+        
         
 
         @media (max-width: 1200px) {
@@ -301,7 +323,7 @@
         </div>
     </div>
 
-    <div class="design">
+    <div class="design" id="design">
         <a href="ACT-1/index.html" class="button">
             <img src="media/catjin.png" alt="ACT-1 Preview" class="button-img"> ACT-1
         </a>
@@ -391,6 +413,13 @@
             </div>
         </div>
     </div>
+
+    <div class="floating-tab">
+        <a href="#design" class="floating-icon-link">
+            <img src="media/tab.jfif" alt="Tab Icon" class="floating-icon">
+        </a>
+    </div>
+    
 
     <footer style="background-color: #212529; text-align: center; padding: 20px; color: white; box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);">
         <p>&#169; Liah's Portfolio. All rights reserved.</p>
