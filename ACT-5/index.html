@@ -21,6 +21,45 @@
         font-family: "Poppins", sans-serif;
         background-color: #212529;
     }
+
+    .vidContainer {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .video {
+        width: 4000px;
+        height: 100%;
+        pointer-events: none;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card {
+        margin-top: 30px;
+        width: 80%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-body {
+        font-size: 1.2rem;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: 200px;
+    }
 </style>
 
 <body>
@@ -40,13 +79,28 @@
         }(document, 'script', 'weatherwidget-io-js');
     </script>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <div class="vidContainer">
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Nrkf7prPDks?si=HqH99INppNfX7pv3&rel=0&controls=0&disablekb=1&mute=1&autoplay=1&loop=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body bg-dark">
+                <h4 class="card-title" style="color:white; text-align:center">Delve into the world of fantasy!</h4>
+                <p class="card-text" style="color:white; text-align:center">Lovebrush Chronicles by NetEase Company</p>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="image-container">
+            <img src="media/lbc.png">
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
