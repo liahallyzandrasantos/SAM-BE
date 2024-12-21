@@ -23,13 +23,13 @@ $islandResult = executeQuery($islandQuery);
   <style>
     body {
       font-family: "Lato", sans-serif;
-      margin-top: 80px; /* To offset the navbar */
+      margin-top: 80px;
       background-color: #212529;
     }
 
     .carousel-item img {
-      object-fit: cover; /* Ensures the image covers the entire area */
-      min-height: 100vh; /* Makes sure the image covers the full height of the screen */
+      object-fit: cover;
+      min-height: 100vh;
     }
   </style>
 </head>
@@ -40,13 +40,14 @@ $islandResult = executeQuery($islandQuery);
   <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Liah's Island</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://liahallyzandrasantos.github.io/SAM-BE/" target="_blank">Main Page</a>
+            <a class="nav-link" href="https://liahallyzandrasantos.github.io/SAM-BE/">Main Page</a>
           </li>
         </ul>
       </div>
@@ -54,21 +55,21 @@ $islandResult = executeQuery($islandQuery);
   </div>
 
   <!-- Page content -->
-  <div class="container-fluid" style="margin-top: 80px;"> <!-- Added container-fluid to span full width -->
+  <div class="container-fluid" style="margin-top: 80px;">
     <!-- Bootstrap Carousel -->
     <div id="islandCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <?php $active = 'active'; // This will make the first slide active ?>
+        <?php $active = 'active'; ?>
         <?php while ($islandRow = mysqli_fetch_assoc($islandResult)): ?>
           <div class="carousel-item <?php echo $active; ?>">
             <a href="https://www.example.com/page1">
-              <img src="media/xiao1.jpg" class="d-block w-100" alt="Island Image">
+              <img src="<?php echo $islandRow["image"]; ?>" class="d-block w-100" alt="Island Image">
               <div class="carousel-caption d-none d-md-block">
                 <h5><?php echo ($islandRow['name']); ?> Island</h5>
               </div>
             </a>
           </div>
-          <?php $active = ''; // Subsequent items will not have the "active" class ?>
+          <?php $active = ''; ?>
         <?php endwhile; ?>
       </div>
 
@@ -84,7 +85,6 @@ $islandResult = executeQuery($islandQuery);
     </div>
   </div>
 
-  <!-- Bootstrap JS (required for the carousel to work) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
