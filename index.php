@@ -324,26 +324,8 @@
     </div>
 
     <div class="design" id="design">
-        <a href="#" class="button">
-            <img src="media/catjin.png" alt="ACT-1 Preview" class="button-img"> ACT-1
-        </a>
-        <a href="#" class="button">
-            <img src="media/catalan.png" alt="ACT-2 Preview" class="button-img"> ACT-2
-        </a>
-        <a href="#" class="button">
-            <img src="media/catharu.png" class="button-img"> ACT-3
-        </a>
-        <a href="#" class="button">
-            <img src="media/cattaiga.png" class="button-img"> ACT-4
-        </a>
-        <a href="#" class="button">
-            <img src="media/catsubaru.png" class="button-img"> ACT-5
-        </a>
-        <a href="#" class="button">
-            <img src="media/catedward.png" class="button-img"> ACT-6
-        </a>
-        <a href="#" class="button">
-            <img src="media/catyuri.png" class="button-img"> ACT-7
+        <a href="A05/index.php" class="button">
+            <img src="media/catjin.png" class="button-img"> A05
         </a>
     </div>
 
